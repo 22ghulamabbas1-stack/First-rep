@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="port.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family:Helvetica, sans-serif;
+        }
+
+        p {
+            margin: 0px !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .row {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+        }
+
+        body {
+            margin: 0px !important;
+            background-image: url(bg.jpg) !important;
+        }
+
+        h1 {
+            margin: 0px !important;
+        }
+
+        .head {
+            width: 100%;
+            padding: 12px 0px;
+            margin: auto;
+            background-color:black;
+
+            .wrapper {
+                width: 100%;
+                margin: auto;
+                padding: 10px 0px 40px 0px;
+            }
+
+            .name {
+                text-align: center;
+                color:red;
+                font-weight: bolder;
+            }
+
+            .hov {
+                transition: 0.5s all ease;
+
+            }
+
+             .hov:hover {
+                color:blue;
+
+            }
+
+            ol, ul {
+               margin: 0 !important;
+
+            }
+
+            .inner-2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 0px;
+                z-index: 1 !important;
+            }
+
+             .list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 34%;
+                border: 1px solid white;
+                padding: 4px 2px;
+                position: fixed;
+                border-radius: 22px;
+                background-color: rgb(154, 148, 148);
+                color: white;
+                margin: 0 !important;
+
+            }
+
+            .list ul li {
+                display: inline-block;
+                align-items: center;
+                padding: 0px 12px;
+                color:white;
+                font-size: 14px;
+                transition: 0.5s all ease;
+                font-weight: normal;
+                text-align: center;
+                font-size: 18px;
+                margin: 0px !important;
+            }
+
+            .list ul li:hover {
+                color: #f5921a;
+            }
+
+            .inner-3 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner-3 button {
+                padding: 10px 50px;
+                background-image:linear-gradient(240deg, blue, red);
+                color: white;
+                border-radius: 8px;
+                border: none;
+                transition: 0.5s all ease;
+            }
+
+            .inner-3 button:hover {
+                background-image:linear-gradient(0deg, blue, red);
+
+            }
+        }
+
+        /* header end */
+
+        /* main sec */
+
+            .panel {
+                margin: 0px !important;
+                width: 100%;
+                padding: 100px 0px;
+                border: 0px !important;
+                background-image: url(bg.jpg);  
+            }
+
+            .pan-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .divide {
+                width: 80%;
+            }
+
+            .sub-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 10px;
+                font-size: 60px;
+
+            }
+
+            .sub-container h1  {
+                font-size: 60px;
+                background-image: url(text-bg-2.jpg);
+                 background-size:cover;
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-background-clip:text;
+                color: transparent;
+                font-weight: bolder;
+            }
+
+
+            .heading-1 .text-1  {
+                color: transparent;
+                font-size: 60px;
+                background-image: url(text-bg-2.jpg);
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-background-clip:text;
+            }
+
+            .heading-1 {
+                display: flex;
+                justify-content: flex-start;
+            }
+
+            .heading-2 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+            }
+
+               .heading-2 .text-2 {
+                color:transparent;
+                font-size: 60px;
+                background-image: url(text-bg.jpg);
+                background-size:cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-clip: text;
+                -webkit-background-clip:text;
+            }
+
+            .sub-container-2 {
+                padding-top: 20px;
+            }
+
+            .sub-container-2 p {
+                font-size: 20px;
+                color: #d1d1d1;
+            }
+
+            .head-btns {
+                padding-top: 40px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .btn-h-1 {
+                padding: 10px 24px;
+                font-size: 16px;
+                color: black;
+                font-weight:bolder;
+                background-color: #f59e0b;
+                cursor: pointer;
+                border: none;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                transition: all ease 0.3s;
+            }
+
+            .h-1 {
+                color: black;
+            }
+
+            .btn-h-1:hover {
+            transform:translateY(-4px);
+            opacity: 2;
+           }
+
+           .h-1:hover {
+            color: black;
+           }
+
+            .btn-h-2 {
+                padding: 10px 24px;
+                font-size: 16px;
+                color:white;
+                font-weight: 600;
+                background-color:transparent;
+                cursor: pointer;
+                border: 2px solid #f59e0b;
+                border-radius: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                transition: all ease 0.3s;
+            }
+
+            .h-2 {
+                color:white;
+            }
+
+            .h-2:hover {
+                color: white;
+            }
+
+            .btn-h-2:hover {
+            transform:translateY(-4px);
+           }
+
+
+        
+
+           /* about section */
+
+           .about-main, .about-main-2{
+            width: 100%;
+            background-color:white;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            margin:auto;
+            padding: 40px 0px;
+           }
+
+           .about-wrapper, .about-wrapper-2{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+           }
+           
+           .about-heading {
+            text-align: center;
+            padding: 20px 0px;
+            color:#e410b2;
+            text-shadow: 0px 0px 2px white;
+            text-decoration: underline;
+            font-weight: bolder;
+            font-size: 22px;
+           }
+
+           .about-1{
+            width: 70%;
+            background-color:black;
+            padding: 40px;
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 42px;
+            border-top-right-radius: 42px;
+            box-shadow:rgba(0, 0, 0, 0.3) 0px 15px 30px;
+            
+           }
+
+           .about-jem {
+             width: 100%;
+            background-color:black;
+            padding: 40px;
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 42px;
+            border-top-right-radius: 42px;
+            box-shadow:rgba(248, 245, 245, 0.3) 0px 15px 30px;
+            border: 1px solid yellow;
+           }
+
+           
+
+           .about-inner-1 h1 {
+            font-size: 40px;
+            color:white;
+            padding-bottom: 10px;
+           }
+
+           .about-inner-1 p {
+            font-size: 18px;
+            color: gray;
+           }
+
+           .about-inner-2 {
+            padding: 100px 0px;
+            background-image: url(themelogo.jpg);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+           }
+
+           .about-img {
+            padding-right: 40px;
+           }
+
+           .theme-1 img {
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: 42px;
+            border-top-right-radius: 42px;
+            height: 400px;
+            width: 350px;
+
+           }
+
+            .g-heading h1 {
+            font-size: 20px;
+            text-decoration: underline;
+           }
+
+           .about-g {
+            width: 100%;
+            padding: 40px 0px;
+           }
+
+           .about-g-in-1 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+           }
+
+           .about-g-g {
+            width: 90%;
+            padding: 40px;
+            background-color: black;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius:44px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 44px;
+            box-shadow:1px 1px 14px 2px white;
+            overflow: hidden;
+            transition: all ease 0.5s;
+           }
+
+           .about-g-g:hover {
+            transform: translateY(-12px);
+           }
+
+           .about-g-g h1 {
+            color: white;
+            padding-bottom: 10px;
+           }
+
+           .about-g-g p {
+            font-size: 18px;
+            color:plum;
+           }
+
+           .about-g-bg {
+            padding: 100px 0px;
+            background-image: url(themelogo.jpg);
+            background-size: contain;
+            background-position: right;
+            background-repeat: no-repeat;
+            transform: translateY(138px);
+            transition: all ease 0.5s;
+           }
+
+           .about-g-g:hover 
+            .about-g-bg {
+                transform:translateY(0px);
+            }
+           
+
+           /* .about-g-sec {
+           } */
+           
+           .about-g-theme img {
+            width: 77%;
+            height: 390px;
+            border-top-left-radius: 44px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius: 44px;
+            border-top-right-radius: 20px;
+            box-shadow: 1px 1px 14px 2px white;
+            transition: all ease 0.5s;
+           }
+
+           .about-g-theme img:hover{
+            transform: translateY(-12px);
+           }
+
+           .g-heading {
+            padding: 40px ;
+            text-align: center;
+           }
+
+           .g-heading h1 {
+            font-size: 42px;
+            color: white;
+            font-weight: bolder;
+           }
+
+           .about-g-sec2 {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+           }
+
+           .about-g-theme2 {
+            display: flex;
+            justify-content: flex-end;
+           }
+
+           .about-g-theme2 img {
+            width: 84%;
+            height: 390px;
+            display: flex;
+            justify-content: flex-end;
+            border-top-left-radius: 44px;
+            border-bottom-left-radius:20px;
+            border-bottom-right-radius: 44px;
+            border-top-right-radius: 20px;
+            box-shadow: 1px 1px 14px 2px white;
+            transition: all ease 0.5s;
+           }
+
+            .about-g-theme2 img:hover{
+            transform: translateY(-12px);
+           }
+
+            .about-g-in-2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+           }
+
+           
+
+           .padding {
+            padding-top:40px;
+           }
+
+           /* skill sec */
+          
+           .skil {
+            width: 100%;
+            padding: 80px 0px;
+           }
+
+           .skil-head {
+                text-align: center;
+                color: white;
+                text-decoration: underline;
+                padding: 10px 0px;
+           }
+
+           
+
+           .skil-mi1, .skil-mi3 {
+            display: flex;
+            justify-content: flex-end;
+           }
+
+           .skil-inp1, .skil-inp2, .skil-inp3, .skil-inp4 {
+            width: 80%;
+           }
+
+            .skil-inp1 h4, .skil-inp2 h4, .skil-inp3 h4, .skil-inp4 h4 {
+                color:white;
+           }
+
+           progress[value] {
+            --webkit-apperance:none;
+            --moz-appearance:none;
+            appearance: none;
+            border: none;
+            width: 100%;
+            border-radius: 20px;
+            height: 10px;
+           }
+
+           progress[value]::-webkit-progress-bar{
+            background-color:#333333;
+            border-radius: 20px;
+           }
+
+            progress[value]::-webkit-progress-value{
+            background-color:#f59e0b;
+            border-radius: 20px;
+           }
+
+
+          .inp::-webkit-slider-thumb{
+            color: yellow;
+           }
+
+           /* projects */
+
+           .proj {
+            width: 100%;
+            padding: 100px 0px;
+           }
+
+           .proj-head {
+            text-align: center;
+            color: white;
+            padding-bottom: 60px;
+            text-decoration: underline;
+           }
+
+           .proj-1-inner {
+            width: 100%;
+           }
+
+           .pr-1-in-1 {
+            padding: 120px 0px;
+            background-image: url(download.tik.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+           }
+
+           .proj-2-inner {
+            width: 100%;
+           }
+
+           .pr-2-in-2 {
+            padding: 120px 0px;
+            background-image: url(papergame.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:top center;
+           }
+
+
+           .proj-1 {
+            display: flex;
+            justify-content: flex-end;
+           }
+
+           .proj-1-inner {
+            width: 80%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:1px 1px 14px 2px white;
+            transition: all 0.4s ease;
+           }
+
+           .proj-1-inner:hover {
+            transform:translateY(-12px);
+           }
+
+           .proj-2-inner {
+            width:80% ;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow:1px 1px 14px 2px white;
+            transition: all 0.4s ease;
+           }
+
+           .proj-2-inner:hover {
+            transform:translateY(-12px);
+           }
+
+           .pr-1-info {
+            background: linear-gradient(145deg, #111b1b, #1d3636);
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 6px;
+           }
+
+
+           .pr-2-info {
+            background: linear-gradient(145deg, #111b1b, #1d3636);
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 6px;
+           }
+
+           .experties {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+
+           .zoom {
+            padding: 2px 6px;
+            border: none;
+            border-radius: 4px;
+            background-color: #444325;
+            color: #f5921a;
+           }
+        
+           .live {
+            display: flex;
+            justify-content: flex-start;
+            align-items:flex-start;
+            gap: 6px;
+            color: #f5921a;
+            padding: 6px 0px;
+           }
+
+           .demo {
+            color: #f5921a;
+            font-size: 1.7rem;
+           }
+
+           /* contacact */
+
+           .touch {
+            width: 100%;
+            padding: 100px 0px;
+           }
+
+           .touch-head {
+            text-align: center;
+            color: white;
+            padding-bottom: 60px;
+           }
+
+
+           .touch-1 {
+            display: flex;
+            justify-content: flex-end;
+           }
+
+           .touch-inner-1 {
+            width: 84%;
+            padding: 40px 40px 284px 40px;
+            background: linear-gradient(145deg, #111b1b, #1d3636);
+            border-radius: 15px;
+           }
+
+           .t-i-1 {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 10px;
+           }
+
+           .t-i-1 h2 {
+            color: white;
+            font-weight: bolder;
+           }
+
+           .t-i-1 p {
+            color: #d1d1d1;
+            font-size: 16px;
+           }
+
+           .t-i-2 {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 0px;
+           }
+
+           .i-2 {
+            display: flex;
+            gap: 12px;
+            padding-top: 10px;
+           }
+
+           .hedge {
+            font-size: 20px;
+            color: #f59e0b;
+           }
+
+           .i-2 p {
+            font-size: 16px;
+            color: #d1d1d1;
+           }
+
+           .t-i-3 {
+            padding-top: 20px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+           }
+
+           .icon1 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2e3f3f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            transition: all 0.3s ease ;
+           }
+
+           .icon1:hover {
+            transform: translateY(-4px);
+            background-color: #f5921a;
+            color: white;
+           }
+
+           .touch-inner-2 {
+            width: 90%;
+            background: linear-gradient(145deg, #111b1b, #1d3636);
+            padding: 40px;
+            border-radius: 15px;
+           }
+
+           .s-i-1 {
+            padding-bottom: 20px;
+            color: white;
+            font-weight: bolder;
+           }
+
+           .s-i-2  {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 30px;
+           }
+
+           .s-inp {
+            width: 100%;
+            background-color: #2b3737;
+            border-radius: 10px;
+            padding: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           }
+
+           .s-inp input{
+            width: 90%;
+            background-color:transparent;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #d1d1d1;
+            transition: all ease 0.3s;
+           }
+
+
+           .s-inp2 input {
+            width: 100%;
+            padding:14px 14px 100px 14px;
+            border: none;
+            background-color:#2b3737;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #d1d1d1;
+           }
+
+
+           .s-inp::placeholder {
+            padding-left:10px;
+            color: #d1d1d1;
+           }
+
+           .s-i-3 {
+            padding-top: 30px;
+           }
+
+           .s-i-3 button {
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            color: black;
+            font-weight: bolder;
+            background-color: #f5921a;
+            border: none;
+            cursor: pointer;
+           }
+
+           /* foooter */
+
+           .foot {
+            width: 100%;
+            padding: 40px 0px;
+            background-color: #111111;
+           }
+
+
+           .fot-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           }
+
+           
+
+           .fot-1 h2 {
+            font-size: 24px;
+            color: white;
+            font-weight: bolder;
+           }
+
+           .fot-1 p {
+            color: #d1d1d1;
+            font-size: 16px;
+           }
+
+           .fot-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           }
+
+           .fot-2-in {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+           }
+
+           .fot-2 h2 {
+            font-size: 18px;
+            font-weight: bolder;
+            color: white;
+           }
+
+           
+            .list2 ul li {
+                display: inline-block;
+                align-items: center;
+                padding: 0px 4px;
+                color:#d1d1d1;
+                transition: 0.5s all ease;
+                font-weight: normal;
+                text-align: center;
+                font-size: 16px;
+                margin: 0px !important;
+            }
+
+            .list2 ul li:hover {
+                color: #f5921a;
+            }
+
+            .fot-3 {
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .fot-3 h2{
+                font-size: 18px;
+                color: white;
+                font-weight: bolder;
+            }
+
+            .t-i-4 {
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+           }
+
+           .icon2 {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #2e3f3f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            transition: all 0.3s ease ;
+           }
+
+            .icon2:hover {
+            transform: translateY(-4px);
+            background-color: #f5921a;
+            color: white;
+            }
+
+            .last-main {
+                padding: 20px 0px 40px 0px;
+                background-color: #0a0a0a;
+
+            }
+
+            .last {
+                text-align: center;
+                font-size: 14px;
+                color: #d1d1d1;
+            }
+
+
+            .icon-1 {
+                color:green;
+                font-size: 20px;
+            }
+
+            .hide-1 {
+                display: none;
+            }
+
+            .icon-2 {
+                color:green;
+                font-size: 20px;
+            }
+
+            .hide-2 {
+                display: none;
+            }
+
+            .nameEr {
+                color: #f5921a;
+            }
+
+            .none-1 {
+                display: none;
+            }
+
+            .emailEr {
+                color: #f5921a;
+            }
+
+            .none-2 {
+                display: none;
+            }
+
+        /* responsiveness mobile */
+
+        @media (Max-Width:767px) {
+            .row {
+                padding: 0px !important;
+            }
+
+            .inner-3 button {
+                height: 30px ;
+                width: 40px;
+                font-size: 8px;
+                text-align: center;
+            }
+
+            .hov {
+                font-size: 20px;
+            }
+
+            ul li {
+                font-size: 4px;
+            }
+
+
+            
+            .pan-1 {
+                width: 100% !important;
+            }
+
+            .pan-2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        
+
+            #web {
+                font-size: 16px;
+            }
+
+            #para {
+                font-size: 12px;
+            }
+
+
+           
+
+           .btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+           }
+
+            .cont {
+            padding: 4px 10px;
+            border: 1px solid red;
+            background: transparent;
+            color:white;
+            border-radius: 6px;
+           }
+
+           .hir {
+            padding: 4px 10px;
+            background-color: red;
+            color: white;
+            border-radius: 6px;
+            border: none;
+           }
+
+           .socials {
+            width: 100%;
+            padding-bottom: 80px;
+           }
+
+            .about-g-in-1 h1 {
+            font-size: 16px;
+            color:white;
+            padding-bottom: 10px;
+           }
+
+           .about-g-in-1 p {
+            font-size: 12px;
+            color: gray;
+           }
+
+             .about-g-in h1 {
+            font-size: 16px;
+            color:white;
+            padding-bottom: 10px;
+           }
+
+           .about-g-in p {
+            font-size: 12px;
+            color: gray;
+           }
+
+           .about-g-in-1, .about-g-in-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           }
+
+           .about-g-sec, .about-g-sec2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+           }
+
+           .about-g-theme img, .about-g-theme2 img {
+            width: 100%;
+           }
+
+           .padding {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+           }
+
+           .about-g-g {
+            width: 100%;
+           }
+
+           .about-g {
+            padding: 0px 10px;
+           }
+
+
+           .g-heading h1 {
+            font-size: 20px;
+            text-decoration: underline;
+           }
+
+           .skil-head h1 {
+            font-size: 20px;
+           }
+
+           .skil-mi1, .skil-mi3 {
+                display: flex;
+                justify-content:flex-start;
+                align-items: center;
+            }
+
+            .proj-1 {
+                padding-bottom: 40px;
+            }
+
+            .proj-head h1 {
+                font-size: 30px;
+            }
+
+            .proj-1-inner, .proj-2-inner {
+                width: 100%;
+            }
+
+            .pr-2-info h2, .pr-1-info h2 {
+                font-size: 18px;
+        }
+
+            .pr-2-info p, .pr-1-info p {
+                font-size: 16px;
+        }
+
+        .experties {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .zoom {
+            padding: 1px 3px;
+        }
+
+        .list {
+            position:absolute !important;
+        }
+
+        .touch-inner-1, .touch-inner-2 {
+            width: 100%;
+        }
+
+        .touch-1 {
+            padding-bottom: 30px;
+        }
+
+
+        .i-2 p {
+            font-size: 12px;
+        }
+
+        .t-i-1 h2, .s-i-1 h2 {
+            font-size: 22px;
+        }
+
+        .hedge {
+        font-size: 12px;
+        }
+
+        .touch-head h1 {
+            font-size: 26px;
+        }
+
+        .s-i-3 button {
+        padding: 12px 16px;
+        border-radius: 30px;
+        font-size: 12px;
+         color: black;
+        font-weight: bolder;
+        background-color: #f5921a;
+        border: none;
+        cursor: pointer;
+        }
+
+        .fot-1-in {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        }
+
+        .fot-1-in h2 {
+        font-size: 20px;
+        }
+
+        .fot-1-in p {
+        font-size: 12px;
+        }
+
+        .fot-2-in {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        }
+
+        .fot-2-in h2 {
+        font-size: 18px;
+        }
+
+        .list2 ul li {
+        font-size: 12px;
+        }
+
+        .fot-3-in {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        }
+
+        .fot-3-in h2 {
+        font-size: 18px;
+        }
+
+        .last-main {
+        padding: 20px 0px 36px 0px;
+        }
+
+        .last p {
+        font-size: 12px;
+        }
+
+        .sub-container {
+            font-size: 30px;
+        }
+
+        .heading-1 .text-1 {
+            font-size: 30px;
+        }
+
+        .heading-2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            gap: 0px !important;
+        }
+
+        .heading-2 .text-2 {
+            width: 100%;
+            font-size: 36px;
+        }
+
+        .sub-container-2 p {
+            font-size: 16px;
+        }
+
+        .head-btns {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+    <div class="head">
+        <div class="wrapper row">
+                <div class="inner-2 col-md-12 col-xs-12">
+                    <div class="list">
+                        <ul>
+                            <a href="#home"><li>Home</li></a>
+                            <a href="#contact1"><li>Contact</li></a>
+                            <a href="#about"><li>About me</li></a>
+                           <a href="#skill"><li>Skiils</li></a>
+                            <a href="#project"><li>Projects</li></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="panel" id="home">
+                <div class="row">
+                <div class="pan-1 col-md-12 col-xs-12">
+                    <div class="divide">
+                        <div class="sub-container">
+                            <div class="heading-1">
+                            <h1 class="text-1">Hey there, I'm</h1>
+                            </div>
+                            <div class="heading-2">
+                            <h1 class="text-2">Abbas Zaidi!</h1>
+                            <a href=""><span class="hi">👋</span></a>
+                        </div>
+                </div>
+                <div class="sub-container-2">
+                    <p>A software engineer & tech enthusiast based in Lahore, Pakistan.
+                    <br>
+                    Welcome to my digital domain, where I engineer solutions and ignite imaginations.</p>
+                </div>
+                <div class="head-btns">
+                    <button class="btn-h-1"><a href="#contact1" class="h-1"><i class="fa-solid fa-phone"></i></a>Get In Touch</button>
+                    <button class="btn-h-2"><a href="#about" class="h-2"><i class="fa-solid fa-rocket"></i></a>My Journey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </main>
+     <div class="skil" id="skill">
+                <div class="row">
+                    <div class="skil-head col-md-12 col-xs-12">
+                        <h1>My Skills</h1>
+                    </div>
+                </div>
+                <div class="row" style="padding-top: 40px;">
+                    <div class="skil-mi1 col-md-6 col-xs-12">
+                        <div class="skil-inp1">
+                            <h4>HTML5</h4>
+                             <progress class="inp" max="100" value="90"></progress>
+                        </div>
+                    </div>
+                     <div class="skil-mi2 col-md-6 col-xs-12">
+                        <div class="skil-inp2">
+                            <h4>CSS3</h4>
+                            <progress class="inp" max="100" value="90"></progress>
+                        </div>
+                    </div>
+                </div>
+                     <div class="row" style="padding-top: 30px;">
+                    <div class="skil-mi3 col-md-6 col-xs-12">
+                        <div class="skil-inp3">
+                            <h4>Bootstrap</h4>
+                             <progress class="inp" max="100" value="80"></progress>
+                        </div>
+                    </div>
+                     <div class="skil-mi4 col-md-6 col-xs-12">
+                        <div class="skil-inp4">
+                            <h4>JavaScript</h4>
+                             <progress class="inp" max="100" value="70"></progress>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- projects -->
+                <div class="proj" id="project">
+                    <div class="row">
+                        <div class="proj-head col-md-12 col-xs-12">
+                            <h1>My Projects</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="proj-1 col-md-6 col-xs-12">
+                            <div class="proj-1-inner">
+                                <div class="pr-1-in-1">
+                                    <!-- img -->
+                                </div>
+                                <div class="pr-1-info">
+                                    <h2 style="color: white;">Tic-Tac-Toe Game</h2>
+                                    <p style="color: #d1d1d1;">I have designed and developed tHe Tic-Tac-Toe Game
+                                        using HTML, CSS and JavaScript The structure is
+                                        built with HTML, styled with CSS for
+                                        a visually appealing layout.</p>
+                                        <div class="experties">
+                                            <button class="zoom">HTML5</button>
+                                            <button class="zoom">CSS3</button>
+                                            <button class="zoom">JavaScript</button>
+                                        </div>
+                                        <div class="live">
+                                            <a href="proj-2.html" class="demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                           <a href="proj-2.html"> <p class="demo">Live Demo</p></a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="proj-2 col-md-6 col-xs-12">
+                            <div class="proj-2-inner">
+                                <div class="pr-2-in-2">
+                                    <!-- img -->
+                                </div>
+                                <div class="pr-2-info">
+                                    <h2 style="color: white;">Rock Paper Scissor</h2>
+                                      <p style="color: #d1d1d1;">I have designed and developed the Rock Paper Scissor Game
+                                        using HTML, CSS and JavaScript The structure is
+                                        built with HTML, styled with CSS for
+                                        a visually appealing layout.</p>
+                                        <div class="experties">
+                                            <button class="zoom">HTML5</button>
+                                            <button class="zoom">CSS3</button>
+                                            <button class="zoom">JavaScript</button>
+                                        </div>
+                                        <div class="live">
+                                            <a href="proj-1.html" class="demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                           <a href="proj-1.html"><p class="demo">Live Demo</p></a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- projects -end -->
+            <div class="about-g">
+                <div class="row">
+                    <div class="g-heading">
+                        <h1 id="about">About me</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="padding">
+                    <div class="about-g-in-1 col-md-8 col-xs-12">
+                        <div class="about-g-g">
+                            <div class="about-g-in">
+                                <h1>Currently, Iam Learning Java Script</h1>
+                                <p>Currently, I am learning Java Script from
+                                     a Youtube Channel called Apna College. 
+                                     It has been really helpful in clearing my
+                                      concepts about Java Script</p>
+                            </div>
+                            <div class="about-g-bg">
+                                <!-- bg -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-g-sec col-md-4 col-xs-12">
+                        <div class="about-g-theme">
+                            <img src="themelogo.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row" style="padding-bottom: 40px;">
+                    <div class="padding">
+                      <div class="about-g-sec2 col-md-4 col-xs-12">
+                        <div class="about-g-theme2">
+                            <img src="themelogo.jpg" alt="">
+                        </div>
+                    </div>
+                      <div class="about-g-in-2 col-md-8 col-xs-12">
+                        <div class="about-g-g">
+                            <div class="about-g-in">
+                                <h1>Currently, Iam learning in IBA Khairpur</h1>
+                                <p>Currently, I am learning in IBA Institute of Khairpur Mirs Campus
+                                     It has been really helpful in clearing my
+                                      concepts about Web Development</p>
+                            </div>
+                            <div class="about-g-bg">
+                                <!-- bg -->
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="touch" id="contact1">
+                <div class="row">
+                    <div class="touch-head">
+                        <h1>Get In Touch</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="touch-1 col-md-5 col-xs-12">
+                        <div class="touch-inner-1">
+                            <div class="t-i-1">
+                                <h2>Contact Information</h2>
+                                <p>Feel free to reach out to me for collaboration,
+                                    or just to say hello!</p>
+                            </div>
+                            <div class="t-i-2">
+                                <div class="i-2">
+                                    <a href="" class="hedge"><i class="fa-solid fa-envelope"></i></a>
+                                    <p>22ghulamabbas1@gmail.com</p>
+                                </div>
+                                <div class="i-2">
+                                    <a href="" class="hedge"><i class="fa-solid fa-phone"></i></a>
+                                    <p>+92 312 3556082</p>
+                                </div>
+                                <div class="i-2">
+                                    <a href="" class="hedge"><i class="fa-solid fa-location-dot"></i></a>
+                                    <p>Lahore, Pakistan</p>
+                                </div>
+                            </div>
+                            <div class="t-i-3">
+                                <a href="https://www.instagram.com/abbas_zaiidi/?hl=en" class="icon1"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/facbook.comlink" class="icon1"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.youtube.com/@AbbasZaidi999" class="icon1"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="" class="icon1"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="touch-2 col-md-7 col-xs-12">
+                        <div class="touch-inner-2">
+                            <div class="s-i-1">
+                                <h2>Send me a Messege</h2>
+                            </div>
+                            <div class="s-i-2">
+                                <div class="s-inp">
+                                    <input type="text" name="name" id="name" placeholder="Your Name">
+                                    <div class="gap-3">
+                                    <a href="" class="icon-1 hide-1"><i class="fa-solid fa-check"></i></a>
+                                    <a href=""  class="nameEr none-1"><i class="fa-solid fa-xmark"></i></a>
+                                </div>
+                                </div>
+                                <div class="s-inp">
+                                    <input type="text" name="" id="email" placeholder="Your Email">
+                                    <div class="gap-3">
+                                    <a href="" class="icon-2 hide-2"><i class="fa-solid fa-check"></i></a>
+                                    <a href=""  class="emailEr none-2"><i class="fa-solid fa-xmark"></i></a>
+                                    </div>
+                                </div>
+                                <div class="s-inp">
+                                    <input type="text" name="" id="" placeholder="Subject">
+                                </div>
+                                <div class="s-inp2">
+                                    <input type="email" id="" placeholder="Your Messege" class="msg">
+                                </div>
+                            </div>
+                            <div class="s-i-3">
+                                <button id="btn">Send Messege</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="foot">
+                    <div class="row">
+                        <div class="fot-1 col-md-4 col-xs-12">
+                            <div class="fot-1-in">
+                                <h2>Abbas Zaidi</h2>
+                                <p>Software Engineer & UI Developer</p>
+                            </div>
+                        </div>
+                        <div class="fot-2 col-md-4 col-xs-12">
+                            <div class="fot-2-in">
+                                <h2>Quick Links</h2>
+                            <div class="list2">
+                            <ul>
+                            <a href="#home"><li>Home</li></a>
+                            <a href="#contact1"><li>Contact</li></a>
+                            <a href="#about"><li>About me</li></a>
+                           <a href="#skill"><li>Skiils</li></a>
+                            <a href="#project"><li>Projects</li></a>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                        <div class="fot-3 col-md-4 col-xs-12">
+                            <div class="fot-3-in">
+                                <h2>Contact With Me</h2>
+                                  <div class="t-i-4">
+                                <a href="https://www.instagram.com/abbas_zaiidi/?hl=en" class="icon2"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/facbook.comlink" class="icon2"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="https://www.youtube.com/@AbbasZaidi999" class="icon2"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="" class="icon2"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="last-main">
+                        <div class="last col-md-12 col-xs-12">
+                            <p>© 2025 Abbas Zaidi. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    <script>
+            let btn = document.querySelector("#btn");
+            let name = document.querySelector("#name");
+            let email = document.querySelector("#email");
+            let icon = document.querySelector(".icon-1")
+            let iconI = document.querySelector(".icon-2")
+            // error variables
+            let nameEr = document.querySelector(".nameEr");
+            let emailEr = document.querySelector(".emailEr");
+            let error = /^([A-Za-z0-9_\-\.])+\@([A-za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            btn.addEventListener("click",(e) => {
+                  e.preventDefault();
+                    
+                //   name condtion
+                if (name.value == "" || name.value == null) {
+                    nameEr.classList.remove("none-1");
+                } else {
+                if (name.value.length >= 6 || name.value != error) {
+                    icon.classList.remove("hide-1");
+                }
+            }
+
+              
+                // email condition
+
+                if (email.value == "" || email.value == null) {
+                    emailEr.classList.remove("none-2");
+                } else {
+                 if (email.value.length >= 10) {
+                    iconI.classList.remove("hide-2");
+                }
+            }
+               
+                
+                // email con
+
+                if (email.value == "" || email.value == null) {
+                    emailEr.classList.remove("none-2");
+                }
+            });
+
+    </script>
+    
+</body>
+</html>

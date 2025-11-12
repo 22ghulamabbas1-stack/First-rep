@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:  0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif, arial;
+            color: #090913;
+        }
+
+        .main {
+            width: 100%;
+            height: 100vh;
+            margin: auto;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrapper {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .box {
+            width: 140px;
+            height: 140px;
+            background-color: whte;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: red;
+            border: 2px solid purple;
+            box-shadow: -2px 2px 4px purple;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .reset {
+            padding-top: 10px;
+        }
+
+        .reset button{
+            padding: 10px 40px;
+            background-color: red;
+            border: none;
+            border-radius: 6px;
+            color: white;
+        }
+
+        .winner  {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .msg-box {
+            padding-bottom: 0px;
+        }
+        .hide {
+            display: none;
+        }
+
+        .new {
+            padding: 5px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .new button {
+            padding: 10px 40px;
+            background-color: rgb(13, 253, 5);
+            border-radius: 8px;
+            border: none;
+            color: black;
+        }
+
+        .msg-boxx {
+            padding: 5px 0px;
+        }
+
+        .hidee {
+            display: none;
+        }
+
+        .winnerr {
+             font-size: 1.5rem;
+            color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="msg-box hide">
+                <p class="winner">Winner</p>
+                   <div class="new">
+                <button class="game">New Game</button>
+            </div>
+            </div>
+             <div class="msg-boxx hidee">
+                <p class="winnerr">Its a Tie</p>
+            </div>
+            <div class="row">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="row">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+              <div class="reset">
+                <button>Reset Game</button>
+            </div>
+        </div>  
+    </div>
+
+    <script>
+        let dox = document.querySelectorAll(".box");
+        let res = document.querySelector(".reset");
+        let item = document.querySelector(".msg-box");
+        let item2 = document.querySelector(".winner");
+        let neww = document.querySelector(".game");
+        let tie = document.querySelector(".msg-boxx");
+        let tiee = document.querySelector(".winnerr");
+        let turn = true;
+
+         const winPatterns = [
+            [0,1,2],
+            [0,3,6],
+            [0,4,8],
+            [1,4,7],
+            [2,5,8],
+            [0,4,8],
+            [2,4,6],
+            [3,4,5],
+            [6,7,8],
+        ];
+
+        dox.forEach ((box) => {
+            box.addEventListener("click", () => {
+                if(turn) {
+                    box.innerText = "X";
+                    box.style.color = "red";
+                    turn = false;
+                }else{
+                    turn = true;
+                    box.innerText = 'O';
+                    box.style.color = "blue";
+                } 
+                box.diabled = true;
+               checkWinner ();
+            })
+        });
+
+        const disabled = () => {
+            for (let hang of dox) {
+                hang.disabled = true;
+            }
+        }
+
+         const enabled = () => {
+            for (let hang of dox) {
+                hang.disabled = false;
+                hang.innerText = "";
+                item.classList.add("hide");
+                tie.classList.add("hidee");
+            }
+        }
+
+        
+        const equal = () => {
+            tiee.innerText = "Its a Tie";
+            tie.classList.remove("hidee");
+        }
+
+
+        const label = () => {
+                let show = dox[0].innerText;
+                let show2 = dox[1].innerText;
+                let show3 = dox[2].innerText;
+                let show4 = dox[3].innerText;
+                let show5 = dox[4].innerText;
+                let show6 = dox[5].innerText;
+                let show7 = dox[6].innerText;
+                let show8 = dox[7].innerText;
+                let show9 = dox[8].innerText;
+
+                if (show != "" && show2 != "" && show3 != "" && show4 != ""
+                    && show5 != "" && show6 != "" && show7 != "" && show8 != "" && show9 != ""){
+                if (show === show2 && show2 === show3 && show3 === show4 && show4 === show5 &&
+                    show5 === show6 && show6 === show7 && show7 === show7 === show8 && show8 === show9){
+                     equal ();
+                }else{
+                    equal ();
+                }
+            } 
+    };
+
+
+        const showWinner = (winner) => {
+            item2.innerText = `Congratulation Winner is ${winner}`;
+            item.classList.remove ("hide");
+            disabled ();
+        }
+
+        const reset = () => {
+                turn = true;
+                item.classList.add("hide");
+                enabled ();
+        }
+
+        const checkWinner = () => {
+            for (let patterns of winPatterns) {
+                let pos1Val = dox[patterns[0]].innerText;
+                let pos2Val = dox[patterns[1]].innerText;
+                let pos3Val = dox[patterns[2]].innerText;
+
+                if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+                    if (pos1Val === pos2Val && pos2Val === pos3Val) {
+                        showWinner (pos1Val);
+                    }else{
+                        label ();
+                    }
+                }
+            }
+        };
+
+        res.addEventListener("click", reset);
+        neww.addEventListener("click", reset);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif, arial;
+        }
+
+        .main {
+            width: 100%;
+            height: 90vh;
+            background-color: white;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+        }
+
+        .heading {
+            width: 100%;
+            background-color: #090913;
+            padding: 10px 0px;
+            text-align: center;
+            color: white;
+        }
+
+        .game {
+            width: 50%;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0px 40px 0px;
+            gap: 20px;
+        }
+
+        .score-box {
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 40px;
+
+            .user, .comp {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .user p , .comp p {
+            font-size: 20px;
+        }
+
+        .msg-container {
+            padding: 12px 40px;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .draw {
+            padding: 20px 0px;
+            color: red;
+            font-size: 20px;
+        }
+
+        .hide {
+            display: none;
+            padding: 20px 0px;
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+        <div class="heading">
+            <h1>Rock-Paper-Scissor</h1>
+        </div>
+        <div class="main">
+            <div class="draw hide">
+                <p>Game Was Draw</p>
+            </div>
+        <div class="game">
+            <div class="choice" id="rock">
+                <img src="rock.img.jpg" alt="" width="160px">
+            </div>
+            <div class="choice" id="paper">
+                <img src="paper.jpg" alt="" width="160px">
+            </div>
+            <div class="choice" id="scissor">
+                <img src="scissor.jpg" alt="" width="160px">
+            </div>
+        </div>
+        <div class="score-box">
+            <div class="user">
+                <p id="user-score">0</p>
+                <h3>You</h3>
+            </div>
+            <div class="comp">
+                <p id="comp-score">0</p>
+                <h3>Computer</h3>
+            </div>
+        </div>
+        <div class="msg-container">
+            <p id="msg">Play Your Move</p>
+        </div>
+    </div>
+        <script>
+            let userScore = 0;
+            let compScore = 0;
+
+            const choices = document.querySelectorAll(".choice");
+            const msg = document.querySelector(".msg-container");
+            const userScorePara = document.querySelector("#user-score");
+            const comScorePara = document.querySelector("#comp-score");
+            const draw = document.querySelector(".draw");
+            
+
+
+            const showWinner = (userWin, userChoice, compChoice) => {
+                if (userWin) {
+                    userScore++;
+                    userScorePara.innerText = userScore;
+                    console.log("You Win");
+                    msg.innerText = `You Win The Game Your ${userChoice} beats ${compChoice}`;
+                    msg.style.backgroundColor = "green";
+                } else {
+                    compScore++;
+                    comScorePara.innerText = compScore;
+                    console.log("Lose The Game");
+                    msg.innerText = `You Lose the game ${compChoice} beats your ${userChoice}`;
+                    msg.style.backgrounnColor = "red";
+                }
+            }
+
+            
+
+            const drawGame = () => {
+                console.log("Game Was Draw Try again")
+                msg.innerText = "Draw The Game";
+            }
+
+            const genComputerChoice = () => {
+                const options  = ["rock", "paper", "scissors"];
+                const ranIdx = Math.floor(Math.random() * 3);
+                return options[ranIdx];
+            }
+
+            const playGame = (userChoice) => {
+                console.log("user Choice", userChoice);
+                //generate comChoiceg
+                const compChoice = genComputerChoice();
+                console.log("comp Choice", compChoice);
+
+                if (userChoice === compChoice) {
+                    //draw game
+                    drawGame();
+                } else {
+                    let userWin = true;
+                    if (userChoice === "rock") {
+                        userWin = compChoice === "paper" ? false : true;
+                    } else if (userChoice === "paper"){
+                        userWin = compChoice === "scissors" ? false : true;
+                    } else { 
+                        userWin = compChoice === "rock" ? false : true;
+                    }
+                    showWinner(userWin, userChoice, compChoice);
+                }
+            };
+
+            choices.forEach(choice => {
+                choice.addEventListener("click", () => {
+                    const userChoice = choice.getAttribute("id");
+                    playGame (userChoice);
+                })
+            });
+
+        </script>
+</body>
+</html>
